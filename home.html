@@ -39,37 +39,40 @@
         <h2>Our Impact in Numbers</h2>
         <div class="stats">
             <div class="card stat">
-                <h3>500+</h3>
-                <p>People Helped</p>
-            </div>
-            <div class="card stat">
-                <h3>120</h3>
-                <p>Projects Completed</p>
-            </div>
-            <div class="card stat">
-                <h3>10</h3>
-                <p>Years of Service</p>
-            </div>
+            <h3 class="counter" data-target="500">0</h3>
+            <p>People Helped</p>
         </div>
+        <div class="card stat">
+            <h3 class="counter" data-target="120">0</h3>
+            <p>Projects Completed</p>
+        </div>
+        <div class="card stat">
+            <h3 class="counter" data-target="10">0</h3>
+            <p>Years of Service</p>
+        </div>
+    </div>
     </section>
 
 
     <section>
         <h2>Success Stories</h2>
 
-        <div class="card">
-            <h3>Community Tech Hub</h3>
-            <p>
-                We helped establish a local tech hub that trained over 200 students
-                in digital skills, leading to new employment opportunities.
-            </p>
-        </div>
+        <section class="card">
+            <h2>Success Stories</h2>
 
-        <div class="card">
-            <h3>Small Business Growth</h3>
-            <p>
-                Our consulting services helped a small business increase revenue
-                by 60% within one year.
+            <div id="storyBox">
+                <h3 id="storyTitle"></h3>
+                <p id="storyText"></p>
+            </div>
+
+            <button onclick="prevStory()">Previous</button>
+            <button onclick="nextStory()">Next</button>
+        </section>
+            <div class="card">
+                <h3>Community Impact</h3>
+                <button onclick="toggleInfo()">Learn More</button>
+                <p id="extraInfo" style="display:none;">
+                We work with local partners to create sustainable programs.
             </p>
         </div>
 
@@ -82,11 +85,12 @@
         </div>
 
     </section>
+    <button onclick="scrollToDonate()">Support Our Work</button>
 
 </div>
 
 <footer>© 2025 EmpowerMe Growth Foundation
 </footer>
-
+<script src="js/script.js"></script>
 </body>
 </html>
