@@ -1,121 +1,89 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f4f4;
-}
-
-header {
-    background: #0a3d62;
-    color: white;
-    padding: 15px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img {
-    height: 50px;
-    width: auto;
-}
-
-.stats {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.stat {
-    text-align: center;
-    flex: 1;
-    min-width: 150px;
-}
-
-.stat h3 {
-    font-size: 36px;
-    margin: 0;
-    color: #0a3d62;
-}
-.container {
-    padding: 40px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-.team {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.team-member {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    width: 200px;
-}
-
-.team-member img {
-    width: 100%;
-    border-radius: 50%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-input, textarea, button {
-    padding: 10px;
-    font-size: 16px;
-}
-
-button {
-    background: #0a3d62;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-footer {
-    background: #0a3d62;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-}
+:root{--navy:#17365a;--paper:#f6f9fa;--card:#fff;--ink:#1d2b3a;--muted:#4f6275;--sun:#f5a623;--leaf:#4f8f27;--blue:#2a7bc4;--line:#d9e3e8;
+    box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+    html{scroll-padding-top:70px;scroll-behavior:smooth}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 "Nunito Sans",system-ui,sans-serif}
+    h1,h2,h3{font-family:"Bricolage Grotesque","Trebuchet MS",sans-serif;color:var(--navy);line-height:1.1;margin:0}
+    a{color:inherit}
+    :focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+    header{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+    header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+    .brand{font:800 20px "Bricolage Grotesque",sans-serif;color:var(--navy);text-decoration:none}
+    nav{display:flex;align-items:center;gap:20px;font-weight:600;font-size:15px}
+    nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--navy)}
+    nav a.nav-donate{background:var(--sun);color:#17365a;padding:6px 16px;border-radius:999px}
+    .hero{background:#8fb3c0;color:#17365a}
+    .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding-top:48px;padding-bottom:48px}
+    .hero h1{font-size:clamp(36px,6vw,62px);font-weight:800;color:#0f2742}
+    .hero p{font-size:19px;max-width:30em;margin:18px 0 26px;color:#17365a}
+    .hero img{width:100%;max-width:420px;justify-self:center;display:block;border-radius:50%;mix-blend-mode:multiply}
+    .btn{display:inline-block;background:#0f2742;color:#fff;padding:13px 24px;border-radius:999px;font-weight:600;text-decoration:none;margin-right:10px;border:0;font-size:16px;font-family:inherit;cursor:pointer}
+    .btn.alt{background:transparent;color:#0f2742;border:2px solid #0f2742}
+    section{padding:72px 0}
+    section h2{font-size:clamp(28px,4vw,40px);margin-bottom:14px}
+    .lead{max-width:38em;color:var(--muted);margin:0 0 36px}
+    .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+    .programs .card{border-top:6px solid var(--sun)}
+    .programs .card:nth-child(2){border-top-color:var(--leaf)}
+    .programs .card:nth-child(3){border-top-color:var(--blue)}
+    .card h3{font-size:21px;margin-bottom:8px}
+    .card p{margin:0;color:var(--muted)}
+    .team{background:var(--card);border-block:1px solid var(--line)}
+    .member{text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:26px 18px}
+    .avatar{width:96px;height:96px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;font:800 30px "Bricolage Grotesque",sans-serif;color:#fff}
+    .member h3{font-size:19px}
+    .member .role{color:var(--muted);font-size:15px;margin:2px 0 0}
+    .stories{display:grid;gap:22px}
+    .story{display:grid;grid-template-columns:auto 1fr;gap:20px;background:var(--card);border:1px solid var(--line);border-left:6px solid var(--leaf);border-radius:14px;padding:26px}
+    .story:nth-child(2){border-left-color:var(--blue)}.story:nth-child(3){border-left-color:var(--sun)}
+    .story .avatar{width:64px;height:64px;font-size:22px;margin:0}
+    .story blockquote{margin:0 0 10px;font-size:19px;color:var(--ink)}
+    .story cite{font-style:normal;font-weight:600;color:var(--muted);font-size:15px}
+    
+    /* Donate: warm and bright */
+    .donate{background:linear-gradient(135deg,#f5a623 0%,#ffc94d 100%)}
+    .donate h2,.donate h3{color:#0f2742}
+    .donate .lead{color:#3a2a05}
+    .tiers{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
+    .tier{background:#fff;color:#0f2742;border:3px solid transparent;border-radius:999px;padding:10px 22px;font:800 20px "Bricolage Grotesque",sans-serif;cursor:pointer}
+    .tier[aria-pressed="true"]{background:#0f2742;color:#fff}
+    .impact{background:#fff;border-radius:14px;padding:22px;font-size:18px;color:#0f2742;min-height:96px;border-left:8px solid #4f8f27}
+    .donate-cols{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:start}
+    .bank{background:#0f2742;color:#fff;border-radius:14px;padding:24px}
+    .bank h3{color:#ffc94d;margin-bottom:10px}
+    .bank dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:15px}
+    .bank dt{color:#9fb8cf}.bank dd{margin:0;font-weight:600}
+    .bank p{font-size:14px;color:#c6d5e0;margin:14px 0 0}
+    .helps{margin-top:30px}
+    .helps .card{border-top:6px solid #0f2742}
+    .helps .card p{color:#3a4a5a}
+    
+    /* Contact: deep and vivid */
+    .join{background:linear-gradient(135deg,#0f2742 0%,#1f5fa8 60%,#2a7bc4 100%);color:#fff}
+    .join h2{color:#fff}
+    .join .lead{color:#dbe9f6}
+    .join-cols{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:start}
+    .join-info p{color:#dbe9f6;margin:0 0 12px}
+    .join-info .pill{display:inline-block;background:#f5a623;color:#0f2742;font-weight:800;border-radius:999px;padding:4px 14px;margin:0 8px 8px 0;font-size:14px}
+    form{background:#fff;border-radius:16px;padding:28px;box-shadow:0 18px 40px rgba(0,0,0,.28);border-top:8px solid #f5a623}
+    label{display:block;font-weight:600;color:#17365a;font-size:15px;margin:0 0 4px}
+    input,select,textarea{width:100%;font:inherit;color:#1d2b3a;background:#f6f9fa;border:2px solid #c8d6de;border-radius:10px;padding:11px 13px;margin-bottom:16px}
+    input:focus,select:focus,textarea:focus{border-color:#2a7bc4;outline:0;background:#fff}
+    textarea{min-height:120px;resize:vertical}
+    form .btn{background:#f5a623;color:#0f2742;font-weight:800;width:100%;margin:0;padding:15px}
+    form .btn:hover{background:#ffb83d}
+    .status{margin:12px 0 0;font-weight:600;color:#2f6b12;min-height:1.4em}
+    footer{background:#0f2742;color:#c6d5e0;padding:36px 0 22px;font-size:15px}
+    .foot{display:grid;grid-template-columns:1fr auto auto;gap:28px;align-items:center}
+    .foot-brand strong{display:block;font:800 22px "Bricolage Grotesque",sans-serif;color:#fff}
+    .socials{display:flex;gap:12px}
+    .socials a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#1b3d66;color:#fff;transition:.15s}
+    .socials a:hover{background:#f5a623;color:#0f2742}
+    .socials svg{width:22px;height:22px}
+    .dev{display:flex;align-items:center;gap:10px;font-size:14px}
+    .dev img{height:36px;width:auto;display:block;background:#fff;border-radius:8px;padding:4px 8px}
+    .copy{text-align:center;margin:26px 0 0;padding-top:18px;border-top:1px solid #27405a;font-size:13px;color:#8fa8bf}
+    @media(max-width:760px){.foot{grid-template-columns:1fr;justify-items:start}}
+    @media(max-width:760px){.hero .wrap,.donate-cols,.join-cols{grid-template-columns:1fr}.hero img{max-width:300px;order:-1}nav{gap:10px;font-size:13px}nav a:nth-child(-n+2){display:none}.story{grid-template-columns:1fr}}
